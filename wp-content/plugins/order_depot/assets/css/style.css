@@ -1,0 +1,9 @@
+  table { width:100%; border-spacing: 5px; } /* cellspacing */
+  th, td { padding: 5px; } /* cellpadding */
+
+  th {background-color:#018DB1;font-weight:bold;color:#fff;}
+  tbody tr td:nth-of-type(1) {font-weight: bold;}
+  tbody tr:nth-of-type(2n) {background-color: #f0f0f0;}
+
+  h6 { margin:0px; }
+  #wpfooter {position: relative;}
