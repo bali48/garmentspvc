@@ -24,7 +24,31 @@ get_header();
 
                 <!-- PRODUCT LIST -->
                 <div class="col-md-9 col-sm-8">
-
+                    <div class="panel panel-default panel-filled">
+                        <div class="panel-body">        
+                            <p>
+                              Woven patches are perfect for designs that cannot be embroidered. 
+                              We take extra care in creating this style of patches for you to meet your specifications.
+                              Woven patches can be any shape as well as a number of different sizes to meet your needs. 
+                              They are attractive and crafted with great care, so they can be worn for years to come.
+                            </p>
+                            <p>
+                              Patch Depot offers your choice of border as a way of completing the look of the patch and also keeping it from unraveling with time.
+                              Choose the style of border you feel will complete your woven patch design. 
+                              We create quality custom products for businesses, academic institutions, organizations, clubs, and sports teams.
+                            </p>
+                            <p>
+                                Have woven patches on hand for conferences, music festivals, school and work uniforms, and to demonstrate affiliation with a club or organization. We consider your unique needs.
+                                Our team of talented patch designers are here to assist you with custom artwork and design services.
+                            </p>
+                            
+                            <p>
+                                We make the process of ordering custom Embroidered Patches easy! Our staff is here to help.
+                                We will guide you through the process of selecting the perfect style of patch, assist you in choosing a backing type, and help you determine the right size patches for your situation, application, and design. We'll be there every step of the way!
+                                Simply Email Us, or complete our quick and convenient Free Quote form, and a sales representative will contact you regarding your request to begin the process of creating your custom patches.
+                            </p>
+                        </div>
+                    </div>
                     <!-- row -->
                     <!--                            <div class="row">
                                                      col 

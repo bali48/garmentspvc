@@ -42,6 +42,7 @@ function wpse_my_style(){
   wp_enqueue_script('touchspinjs',get_template_directory_uri() . '/assets/js/vendor/touchspin/jquery.bootstrap-touchspin.js');
   wp_enqueue_script('starrjs', get_template_directory_uri() .'/assets/js/vendor/starrr/starrr.min.js');
   wp_enqueue_script('elevatezoomjs', get_template_directory_uri() .'/assets/js/vendor/elevatezoom/jquery.elevateZoom-3.0.8.min.js');
+  wp_enqueue_script('countriesjs', get_template_directory_uri() .'/assets/js/countries.js');
     
 } 
 
@@ -113,19 +114,56 @@ function create_Patches() {
 add_action( 'init', 'create_Patches_sizes' );
 function create_Patches_sizes() {
    
-    register_post_type( 'Patch-Size',
+    register_post_type( 'Patch-Backing',
     // CPT Options
         array(
             'labels' => array(
-                'name' => __( 'Patch-Size' ),
-                'singular_name' => __( 'Patch-Size' )
+                'name' => __( 'Patch-Backing' ),
+                'singular_name' => __( 'Patch-Backing' )
             ),
-            'supports' => array( 'title', 'thumbnail', 'editor','comments','revisions','custom-fields'),
+            'supports' => array( 'title', 'thumbnail'),
+            'menu_icon' => 'dashicons-awards',
+            'public' => true,
+//            'taxonomies' => array('category'),
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'Patch-Backing'),
+        )
+    );
+}
+add_action( 'init', 'create_Patches_border' );
+function create_Patches_border() {
+   
+    register_post_type( 'Patch-border',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Patch-border' ),
+                'singular_name' => __( 'Patch-border' )
+            ),
+            'supports' => array( 'title', 'thumbnail'),
             'menu_icon' => 'dashicons-awards',
             'public' => true,
             'taxonomies' => array('category'),
             'has_archive' => true,
-            'rewrite' => array('slug' => 'Patch-Size'),
+            'rewrite' => array('slug' => 'Patch-border'),
+        )
+    );
+}
+add_action( 'init', 'create_Patches_thread' );
+function create_Patches_thread() {
+    register_post_type( 'patch-MetallicThread',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'patch-MetallicThread' ),
+                'singular_name' => __( 'patch-MetallicThread' )
+            ),
+            'supports' => array( 'title', 'thumbnail'),
+            'menu_icon' => 'dashicons-awards',
+            'public' => true,
+//            'taxonomies' => array('category'),
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'patch-MetallicThread'),
         )
     );
 }

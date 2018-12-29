@@ -37,7 +37,7 @@
             ?>
                 <tr>
                   <!--<td><?=$key +1 ?></td>-->
-                  <td><?=$value->size_name?></td>
+                  <td><?=$value->size_name?>"</td>
                   <td><?=$value->unit_100?></td>
                   <td><?=$value->unit_200?></td>
                   <td><?=$value->unit_300?></td>
@@ -46,8 +46,8 @@
                   <td><?=$value->unit_1000?></td>
                   <td><?=$value->unit_2000?></td>
                   <td class="btn-<?=$value->order_depot_size_ID?>">
-                    <input type="button" class="btn btn-danger btn-sm remove_pool" rel-id="<?=$match->order_depot_size_ID?>" Value="Remove">
-                    <!--<input type="button" class="btn btn-info btn-sm" rel-id="<?=$match->order_depot_size_ID?>" Value="Remove">-->
+                    <a class="btn btn-info btn-sm" href="?page=matches&tab=add_new&order_depot_size_ID=<?= $value->order_depot_size_ID ?>">Edit</a>
+                            <input type="button" class="btn btn-danger btn-sm remove_order_size" rel-id="<?= $value->order_depot_size_ID ?>" Value="Remove">
                   </td>
                 </tr>
               <?php

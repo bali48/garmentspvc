@@ -20,40 +20,34 @@ get_header();
         <div class="container clearfix">
             <div class="row">
 
-
+                
 
                 <!-- PRODUCT LIST -->
                 <div class="col-md-9 col-sm-8">
+                    <!-- tile body -->
+                    <div class="tile-body">
+                        <div class="panel panel-default panel-filled">
+                            <!--                                        <div class="panel-heading">
+                                                                        <h3 class="panel-title custom-font">Filled Paragraph</h3>
+                                                                    </div>-->
+                            <div class="panel-body">
+                                <p>100% embroidered patches are patches in which all of the twill patch backing is covered in thread.
+                                    This style of patch is among the most popular options that Patch Depot offers, because of its outstanding quality and appearance. Intricate logos and detailed artwork requiring more than one color look best with 100% embroidery.
+                                    The stitching depth and high thread count  help to endow a high perceived value.
+                                </p>
+                                <p>
+                                    We make the process of ordering custom Embroidered Patches easy! Our staff is here to help.
+                                    We will guide you through the process of selecting the perfect style of patch, assist you in choosing a backing type, and help you determine the right size patches for your situation, application, and design. We'll be there every step of the way!
+                                    Simply Email Us, or complete our quick and convenient Free Quote form, and a sales representative will contact you regarding your request to begin the process of creating your custom patches.
+                                </p>
+                            </div>
+                        </div>
 
-                    <!-- row -->
-                    <!--                            <div class="row">
-                                                     col 
-                                                    <div class="col-md-12">
-                                                        <form class="form-inline text-right product-filters">
-                                                            <div class="form-group">
-                                                                <label>Sort By</label>
-                                                                <select class="selectpicker">
-                                                                    <option>Name</option>
-                                                                    <option>Price</option>
-                                                                    <option>Availability</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label>Show</label>
-                                                                <select class="selectpicker">
-                                                                    <option>9</option>
-                                                                    <option>18</option>
-                                                                    <option>27</option>
-                                                                    <option>36</option>
-                                                                    <option>45</option>
-                                                                </select>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                     /col 
-                                                </div>-->
-                    <!-- /row -->
 
+                    </div>
+                                <!-- /tile body -->
+                    
+                    <br>
                     <div class="row product-list">
 
                         <?php

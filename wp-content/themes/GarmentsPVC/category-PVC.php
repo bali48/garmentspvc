@@ -24,7 +24,29 @@ get_header();
 
                 <!-- PRODUCT LIST -->
                 <div class="col-md-9 col-sm-8">
-
+                    <div class="panel panel-default panel-filled">
+                        <div class="panel-body">
+                            <p>
+                              PVC patches are made of Polyvinyl chloride, and are perfect for some of the most creative designs.
+                              They allow for Pantone color matching, which is not available with thread based and embroidered products.
+                              As such, PVC patches are perfect for use with demanding corporate branding standards. Additionally, they allow for much finer detail to be produced and for 3D design elements to be incorporated.
+                              Susceptible to neither extreme heat nor extreme cold, PVC patches are waterproof and excel in outdoor applications.  
+                            </p>
+                            <p>
+                              Made popular by the military and related industries, PVC patches are suitable for any application in which a durable, flexible, lightweight, and striking patch design is required.
+                              Oftentimes, a PVC patch can outlast the garment or piece of gear to which it is attached.
+                              The most popular backing for PVC patches is a Velcro backing.
+                              This allows the patch to be easily added and removed from uniforms and gear.
+                              Also known as "morale patches", our custom PVC patches are becoming immensely popular with civilians and military units alike.  
+                            </p>
+                            <p>
+                                We make the process of ordering custom Embroidered Patches easy! Our staff is here to help.
+                                We will guide you through the process of selecting the perfect style of patch, assist you in choosing a backing type, and help you determine the right size patches for your situation, application, and design. We'll be there every step of the way!
+                                Simply Email Us, or complete our quick and convenient Free Quote form, and a sales representative will contact you regarding your request to begin the process of creating your custom patches.
+                            </p>
+                        </div>
+                    
+                    </div>
                     <!-- row -->
                     <!--                            <div class="row">
                                                      col 

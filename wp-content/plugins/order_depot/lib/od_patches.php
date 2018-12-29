@@ -16,32 +16,55 @@ class od_patches{
   }/*getApiLeagues*/
 /*add_scCart*/
     /**
-      **  Add user Bets to cart
+      **  Add and update
     **/
   function add_od_new_patch($value) {
         global $wpdb;
-
         $table = OD_PATCHSIZES;
-        $data = array(
-            'size_name' => $value['patchsize'],
-            'CategoryID' => $value['categoryid'],
-            'unit_100' => $value['unit_100'],
-            'unit_200' => $value['unit_200'],
-            'unit_300' => $value['unit_300'],
-            'unit_400' => $value['unit_400'],
-            'unit_500' => $value['unit_500'],
-            'unit_1000' => $value['unit_1000'],
-            'unit_2000' => $value['unit_2000'],
-            'created_by' => get_current_user_id(),
-            'created_at' => date('Y-m-d')
-        );
+        if ($value != NULL) {
+            $data = array(
+                'size_name' => $value['patchsize'],
+                'CategoryID' => $value['categoryid'],
+                'unit_100' => $value['unit_100'],
+                'unit_200' => $value['unit_200'],
+                'unit_300' => $value['unit_300'],
+                'unit_400' => $value['unit_400'],
+                'unit_500' => $value['unit_500'],
+                'unit_1000' => $value['unit_1000'],
+                'unit_2000' => $value['unit_2000'],
+            );
+            if($value['patchsize'] != NULL && $value['patchsize'] != ''){
+                $data['created_by'] = get_current_user_id();
+                $data['created_at'] = date('Y-m-d');
+                $wpdb->insert($table, $data);
+                $my_id = $wpdb->insert_id;
+                return $my_id;
+            } else {
+                $data['modified_by'] = get_current_user_id();
+                $data['modified_at'] = date('Y-m-d');
+                $wpdb->update($table, $data, array('order_depot_size_ID'=>$value['patchsize']));
+                return $value['patchsize'];
+            }
+            
 //    $format = array('%s','%d');
-        $wpdb->insert($table, $data);
-        $my_id = $wpdb->insert_id;
-        return $my_id;
+            
+            
+        }
+    }
+    
+    function getPatchByID($patch_id = '') {
+        global $wpdb;
+        $tableName = OD_PATCHSIZES;
+        $condition = '';
+        if ($patch_id != '') {
+            $condition = ' AND order_depot_size_ID= "' . $patch_id . '"';
+            $sql = "SELECT * FROM " . $tableName . " WHERE 1 " . $condition . " ORDER BY order_depot_size_ID DESC";
+            $PatchSize = $wpdb->get_row($sql);
+            return $PatchSize;
+        }
     }
 
-/*add_scCart*/
+    /*add_scCart*/
 
     /**
       **  Remove user Bets from cart
