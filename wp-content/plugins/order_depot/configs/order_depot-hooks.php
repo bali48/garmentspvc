@@ -27,7 +27,8 @@
 /**
  ** Front End ShortCode for withdrawal
  **/
-add_shortcode('soccer_payments', 'front_display_payment');
+add_shortcode('patch_order_form', 'front_display_payment');
+add_shortcode('patch_price_table', 'price_tables');
 
 
 /**

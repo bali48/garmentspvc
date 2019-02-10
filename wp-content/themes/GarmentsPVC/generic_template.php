@@ -21,7 +21,11 @@ get_header();
     <div class="content-wrap">
 
         <div class="container clearfix">
-            <div class="row">
+            <div class="col-md-3 col-sm-8 sidebar">
+                    <?php dynamic_sidebar( 'left-sidebar' );?>
+                </div>
+            
+                
                 <!-- PRODUCT LIST -->
                 <div class="col-md-9 col-sm-8">
                     <div class="panel panel-default panel-filled">
@@ -39,8 +43,9 @@ get_header();
                         </div>
                     
                     </div>
-                </div>
-                <div class="row  product-list">
+                
+            
+                <div class="row mix-grid portfolio" id="gallery" data-lightbox="gallery">
                   <h6 class="text-bold text-uppercase mb-10">Merrow Border</h6>
                                  <?php
                     $loop = new WP_Query(array(
@@ -50,21 +55,22 @@ get_header();
                     if ($loop->have_posts()) :
                             while ($loop->have_posts()) : $loop->the_post();
                     ?>
-                    <div class="col-md-3 col-sm-6">
-                                    <article class="product-card">
-                                        <div class="product-image two-sided">
-                        <?php
-                        $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()), 'thumbnail' );
-                        ?>
-                        <img src="<?php echo $url; ?>" alt="">
-                        <img src="<?php echo $url; ?>" alt="">
-                        <div class="image-overlay" data-lightbox="gallery">
-                                            <a href="<?php echo $url; ?>" data-lightbox="gallery-item"><i class="fa fa-search-plus"></i></a>
+                    <div class="portfolio-item col-md-4 col-sm-6 mix category_1 mix_all">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <div class="boxer">
+                                            <?php
+                                  $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()), 'thumbnail');
+                                  ?>    
+                                        <img src="<?php echo $url; ?>" alt="" height="200" width="200" alt="" class="img-responsive">
                                         </div>
+                                        </a>
+                                    <div class="portfolio-overlay">
+                                        <a href="<?php echo $url; ?>" class="btn-middle" data-lightbox="gallery-item"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
 
-                                        </div>
-                                        </article>
-                    </div>
+                            </div>
                   
                                 
                     <?php endwhile;    endif;?>
@@ -99,7 +105,7 @@ get_header();
                     <?php endwhile;    endif;?>
                 </div>
             </div>
-        </div>
+        
 <?php
 get_footer()
 ?>

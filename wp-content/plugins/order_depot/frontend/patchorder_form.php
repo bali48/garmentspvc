@@ -294,10 +294,6 @@
                     <br>
                     
                         
-                        
-                        
-                        
-                        
                     <br />
                     <div align="center">
                         <button type="button" name="previous_btn_patch_additional_information_details" id="previous_btn_patch_additional_information_details" class="btn btn-default btn-lg">Previous</button>

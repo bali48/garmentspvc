@@ -14,6 +14,9 @@
         body{
     background-color: #ffff
 }
+.content-wrap{
+    background-color: #ffff
+}
     </style>
 </head>
 
@@ -24,7 +27,7 @@
 
 
 
-<?php echo '<pre>'; var_dump($_POST); echo '</pre>'; ?>
+<?php // echo '<pre>'; var_dump($_POST); echo '</pre>'; ?>
 
     <!-- ============================================
     ================= Page Wrapper ==================
@@ -146,17 +149,8 @@
                             <!--<li><a href="<?= get_home_url()?>/WomenGarments">Women</a></li>-->
                             
                             <li><a href="<?= get_home_url()?>/Patches">Gallery</a></li>
-                            <li><a href="<?= get_home_url()?>/contact-us">contact us</a></li>
                             <li><a href="#">Patches</a>
                                 <ul>
-<!--                                    <li><a href="#">Shoes</a>
-                                        <ul>
-                                            <li><a href="product-list.html">Boots</a></li>
-                                            <li><a href="product-list.html">Sandals</a></li>
-                                            <li><a href="product-list.html">Flats</a></li>
-                                            <li><a href="product-list.html">Wedges</a></li>
-                                        </ul>
-                                    </li>-->
                                     <li><a href="<?php echo esc_url( $category_link_100 ); ?>">100embroidery</a></li>
                                     <li><a href="<?php echo esc_url( $category_link_75 ); ?>">75embroidery</a></li>
                                     <li><a href="<?php echo esc_url( $category_link_50 ); ?>">50embroidery</a></li>
@@ -164,6 +158,21 @@
                                     <li><a href="<?php echo esc_url( $category_link_Woven ); ?>">Woven</a></li>
                                 </ul>
                             </li>
+                            <li><a href="#">Patch Option</a>
+                                <ul>
+                                    <li><a href="<?= get_home_url()?>/backing-options">Backing Options</a></li>
+                                    <li><a href="<?= get_home_url()?>/edge-styling">Edges Options</a></li>
+                                    <li><a href="<?= get_home_url()?>/edge-styling">Edges Options</a></li>
+                                    <li><a href="<?= get_home_url()?>/threads-chart">Threads Chart</a></li>
+                                    <li><a href="<?= get_home_url()?>/twillo-chart">Twillo Chart</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="color:red" href="<?= get_home_url()?>/place-order">Place Order</a></li>
+                            <li><a style="color:red" href="<?= get_home_url()?>/pricetable">Price Chart</a></li>
+                            <li><a href="<?= get_home_url()?>/about-us">About us</a></li>
+                            <li><a href="<?= get_home_url()?>/contact-us">contact us</a></li>
+                            
+                            
 <!--                            <li class="mega-menu"><a href="#">Man</a>
                                 <div class="mega-menu-content col-4">
                                     <ul>

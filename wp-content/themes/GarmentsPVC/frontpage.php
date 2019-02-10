@@ -500,7 +500,9 @@ get_header();
                 <div class="col-md-12">
                     <h6 class="text-bold text-uppercase mb-10">PVC Patches</h6>
 
-                    <div class="row product-list">
+    <div class="row mix-grid portfolio" id="gallery" data-lightbox="gallery">
+                            
+                    <!--<div class="row product-list">-->
                         <?php
                         $loop = new WP_Query(array(
                             'post_type' => 'Patches',
@@ -509,66 +511,25 @@ get_header();
                         ));
                         if ($loop->have_posts()) :
                             while ($loop->have_posts()) : $loop->the_post();
-                                ?>
-                                <div class="col-md-3 col-sm-6">
-                                    <article class="product-card">
-                                        <div class="product-image two-sided">
-                                           <?php 
+                        
                                             $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()), 'thumbnail' );
-                                            ?>
-                                            <img src="<?php echo $url; ?>" alt="" height="268" width="270">
-                                            <img src="<?php echo $url; ?>" alt="" height="268" width="270">
-                                            <?php if (get_post_meta(get_the_ID(), '_patchesimage1', true)) {
-                                                ?>
-                                                <!--<img src="<?php // echo get_post_meta(get_the_ID(), '_patchesimage1', true); ?>" alt="">-->
-                                            <?php }
-                                            ?>
-                                            <?php if (get_post_meta(get_the_ID(), '_patchesimage2', true)) {
-                                                ?>
-                                                <!--<img src="<?php //echo get_post_meta(get_the_ID(), '_patchesimage2', true); ?>" alt="">-->
-                                            <?php }
-                                            ?>
                                             
-                                        <div class="image-overlay" data-lightbox="gallery">
-                                            
-                                            <a href="<?php echo $url; ?>" data-lightbox="gallery-item"><i class="fa fa-search-plus"></i></a>
-                                            
-                                            <?php if (get_post_meta(get_the_ID(), '_patchesimage1', true)) {
-                                                ?>
-                                                <!--<a href="<?php //echo get_post_meta(get_the_ID(), '_patchesimage1', true); ?>" data-lightbox="gallery-item"><i class="fa fa-search-plus"></i></a>-->
-                                            <?php }
-                                            ?>
-                                            <?php if (get_post_meta(get_the_ID(), '_patchesimage2', true)) {
-                                                ?>
-                                                <!--<a href="<?php //echo get_post_meta(get_the_ID(), '_patchesimage2', true); ?>" class="hidden" data-lightbox="gallery-item"></a>-->
-                                            <?php }
-                                            ?>
-                                            <?php if (get_post_meta(get_the_ID(), '_patchesimage3', true)) {
-                                                ?>
-                                                <!--<a href="<?php //echo get_post_meta(get_the_ID(), '_patchesimage3', true); ?>" class="hidden" data-lightbox="gallery-item"></a>-->
-                                            <?php } ?>
-                                            <?php if (get_post_meta(get_the_ID(), '_patchesimage4', true)) {
-                                                ?>
-                                                <!--<a href="<?php //echo get_post_meta(get_the_ID(), '_patchesimage4', true); ?>" class="hidden" data-lightbox="gallery-item"></a>-->
-                                            <?php }
-                                            ?>
-                                            <?php if (get_post_meta(get_the_ID(), '_patchesimage5', true)) {
-                                                ?>
-                                                <!--<a href="<?php //echo get_post_meta(get_the_ID(), '_patchesimage5', true); ?>" class="hidden" data-lightbox="gallery-item"></a>-->
-                                            <?php }
-                                            ?>              
-                                            <a href="product-detail.html"><i class="fa fa-ellipsis-h"></i></a>
+            ?>
+                    <div class="portfolio-item col-md-4 col-sm-4 mix category_1 mix_all">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <div class="boxer">
+                                        <img src="<?php echo $url; ?>" alt="" height="200" width="200" alt="" class="img-responsive">
                                         </div>
-
-                                        </div>
-                                        <div class="product-detail">
-                                            <h4><a href="<?php the_permalink(); ?>"><?php echo get_the_title() ?></a></h4>
-                                            <span class="price">$18.99</span>
-                                            <button class="add-to-cart"><i class="fa fa-angle-right"></i> Add to cart</button>
-                                        </div>
-                                    </article>
+                                        </a>
+                                    <div class="portfolio-overlay">
+                                        <a href="<?php echo $url; ?>" class="btn-middle" data-lightbox="gallery-item"><i class="fa fa-search"></i></a>
+                                    </div>
                                 </div>
-                            <?php endwhile; ?>
+
+                            </div>
+
+    <?php endwhile; ?>
                             <div class="col-md-3 col-sm-6">
                                 <div class="box-tree more-proerty text-center">
                                     <div class="item-tree-icon">

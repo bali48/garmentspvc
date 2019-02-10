@@ -9,6 +9,13 @@ if($_POST['amount']!=null){
     /***
      ** html code which display to user
      * ***/
-    include_once('front_html.php');
+    include_once('patchorder_form.php');
+}
+
+function price_tables($attr){
+    /***
+     ** html file which display Price table to user
+     * ***/
+    include_once('table_html.php');
 }
 ?>

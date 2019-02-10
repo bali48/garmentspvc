@@ -45,6 +45,19 @@ function wpse_my_style(){
   wp_enqueue_script('countriesjs', get_template_directory_uri() .'/assets/js/countries.js');
     
 } 
+add_action('widgets_init', 'sidebar_widgets_init');
+
+function sidebar_widgets_init() {
+    register_sidebar(array(
+        'name' => __('Left Sidebar', 'twentythirteen'),
+        'id' => 'left-sidebar',
+        'description' => __('Appears in the LeftSide of the site.', 'twentythirteen'),
+       // 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+       // 'after_widget' => '</aside>',
+       // 'before_title' => '<h3 class="widget-title">',
+       // 'after_title' => '</h3>',
+    ));
+}
 
 //featured image support
 add_theme_support('post-thumbnails');
